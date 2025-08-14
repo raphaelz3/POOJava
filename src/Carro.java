@@ -5,6 +5,12 @@ public class Carro {
     public String modelo;
     public int ano;
 
+    //metodo construtor
+    public Carro(String marca, String modelo, int ano){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+    }
     //metodos
     public void mostrarInformacoes(){
         System.out.println("Marca: " + marca);

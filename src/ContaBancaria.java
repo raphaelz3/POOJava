@@ -1,6 +1,10 @@
 public class ContaBancaria {
     public String nome;
-    public double saldo;
+    private double saldo;
+
+    public ContaBancaria(){
+
+    }
 
     public void depositar(double depositarValor){
         saldo += depositarValor;
@@ -8,8 +12,17 @@ public class ContaBancaria {
     }
 
     public void sacar(double sacarValor){
-        saldo -= sacarValor;
-        System.out.println("Valor sacado: R$" + sacarValor + "\nSaldo Atual: R$" + saldo);
-
+       if(sacarValor <= saldo) {
+           saldo -= sacarValor;
+           System.out.println("Valor sacado: R$" + sacarValor + "\nSaldo Atual: R$" + saldo);
+       }
+       else
+           System.out.println("Sem Saldo");
     }
+
+    public void exibirSaldo(){
+        System.out.println("Saldo atual: R$ " + saldo);
+    }
+
+
 }
