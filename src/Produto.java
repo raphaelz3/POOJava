@@ -12,7 +12,6 @@ public class Produto {
     //metodos são as ações que a classe possui, o que pode fazer
     public void mostrarinformacoes(){
      System.out.println("Nome: " + nome);
-     System.out.println("Preço: " + preco);
      System.out.println("Marca: " + marca);
     }
 
@@ -28,5 +27,14 @@ public class Produto {
             this.preco = preco;
     }
 
+    public void adicionarEstoque(int estoque){
+        if(estoque > 0)
+            this.estoque += estoque;
+    }
+
+    public void realizarVenda(int estoque){
+        if(estoque > 0)
+            this.estoque -= estoque;
+    }
 
 }
