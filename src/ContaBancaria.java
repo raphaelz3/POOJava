@@ -20,7 +20,7 @@ public class ContaBancaria {
            System.out.println("Sem Saldo");
     }
 
-    public void exibirSaldo(){
+    public void getSaldo(){
         System.out.println("Saldo atual: R$ " + saldo);
     }
 

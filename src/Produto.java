@@ -3,9 +3,9 @@ public class Produto {
     //São as caracteristicas da classe, o que define a classe
     public String nome;
     public double tamanho;
-    public double preco;
+    private double preco;
     public String cor;
-    public int unidade;
+    private int estoque;
     public String marca;
 
     //método
@@ -14,6 +14,19 @@ public class Produto {
      System.out.println("Nome: " + nome);
      System.out.println("Preço: " + preco);
      System.out.println("Marca: " + marca);
-
     }
+
+    public void getPreco(){
+        System.out.println("Preço do produto: " + preco);
+    }
+    public void getEstoque(){
+        System.out.println("Estoque do produtoÇ " + estoque);
+    }
+
+    public void setPreco(double novoPreco){
+        if(novoPreco > 0)
+            this.preco = preco;
+    }
+
+
 }
